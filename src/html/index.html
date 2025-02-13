@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section x-data="{ mobileNavOpen: false }" class="bg-white">
+          <div class="pb-60 mb-80 relative bg-green-500">
+              <div class="container mx-auto px-4">
+                  <div class="flex items-center justify-between py-5 -px-4 relative">
+                    <div class="w-auto">
+                      <div class="flex flex-wrap items-center">
+                        <div class="w-auto mr-14">
+                          <a href="#">
+                            <img src="cronos-assets/logos/cronos-logo-white.svg" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2">
+                        <div class="flex flex-wrap items-center">
+                          <div class="w-auto hidden lg:block">
+                            <ul class="flex items-center">
+                              <li class="mr-9 text-sm text-green-50 hover:text-green-100"><a href="#">About</a></li>
+                              <li class="mr-9 text-sm text-green-50 hover:text-green-100"><a href="#">Company</a></li>
+                              <li class="mr-9 text-sm text-green-50 hover:text-green-100"><a href="#">Services</a></li>
+                              <li class="text-sm text-green-50 hover:text-green-100"><a href="#">Testimonials</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="w-auto">
+                      <div class="hidden lg:block">
+                          <div class="inline-block">
+                              <a class="px-6 py-3 bg-green-600 text-sm text-green-50 font-bold hover:bg-green-700 focus:ring focus:ring-green-300 transition duration-200" href="#">Request Demo</a>
+                          </div>
+                      </div>
+                      <div class="lg:hidden flex items-center">
+                          <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z" fill="white"></path>
+                              </svg>
+                          </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
+                    <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-80"></div>
+                    <nav class="relative z-10 px-9 pt-8 bg-white h-full overflow-y-auto">
+                      <div class="flex flex-wrap h-full">
+                        <div class="w-full">
+                          <div class="flex items-center justify-between -m-2 mb-10">
+                            <div class="w-auto p-2">
+                              <a class="inline-block" href="#">
+                                <img src="cronos-assets/logos/cronos-logo.svg" alt="">
+                              </a>
+                            </div>
+                            <div class="w-auto p-2">
+                              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                                  <svg style="width: 18px; height: 18px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                  </svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="flex flex-col w-full">
+                            <ul>
+                              <li class="mb-6"><a class="text-sm hover:text-gray-700" href="#">About</a></li>
+                              <li class="mb-6"><a class="text-sm hover:text-gray-700" href="#">Company</a></li>
+                              <li class="mb-6"><a class="text-sm hover:text-gray-700" href="#">Services</a></li>
+                              <li><a class="text-sm hover:text-gray-700" href="#">Testimonials</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="flex flex-col justify-end w-full pb-8">
+                          <div class="flex flex-wrap">
+                            <div class="w-full">
+                              <div class="block">
+                                  <a class="px-6 py-3 block text-center bg-green-500 text-white text-sm font-bold w-full mb-6 hover:bg-green-600 focus:ring focus:ring-green-300 transition duration-200" href="#">Try 14 Days Free Trial</a>
+                                  <p class="text-sm mb-4 text-center text-gray-500">© 2021 All rights reserved.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+              </div>
+              <div class="container mx-auto p-4 mt-8 pb-12">
+                  <h1 class="text-center text-white text-5xl lg:text-6xl font-bold max-w-xl lg:max-w-4xl mx-auto mb-6">
+                      <span>Take care of your</span> 
+                      <span class="text-yellow-500">performance</span>
+                      <span>every day.</span>
+                  </h1>
+                  <p class="text-center text-white mb-12 max-w-xl mx-auto">Build a well-presented brand that everyone will love. Take care to develop resources continually and integrity them with previous projects.</p>
+                  <div class="flex flex-wrap justify-center -m-2 mb-20">
+                      <div class="p-2 w-full sm:w-auto">
+                          <a class="px-6 py-3 bg-yellow-500 text-sm block text-center text-yellow-900 font-bold hover:bg-yellow-400 focus:ring focus:ring-yellow-200 transition duration-200" href="#">Track your performance</a>
+                      </div>
+                      <div class="p-2 w-full sm:w-auto">
+                          <a class="px-6 py-3 bg-green-600 text-sm block text-center text-green-50 font-bold hover:bg-green-700 focus:ring focus:ring-green-300 transition duration-200" href="#">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="max-w-4xl mx-auto relative">
+                  <div class="absolute left-0 right-0 flex">
+                      <div class="relative w-full">
+                          <img class="mt-4 w-full object-cover" style="height: 446px;" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="">
+                          <button class="absolute left-1/2 top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2">
+                            <svg width="74" height="74" viewbox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333313 37C0.333313 57.2504 16.7495 73.6667 37 73.6667C57.2504 73.6667 73.6666 57.2504 73.6666 37C73.6666 16.7496 57.2504 0.333328 37 0.333328C16.7495 0.333328 0.333313 16.7496 0.333313 37ZM70 37C70 55.2254 55.2254 70 37 70C18.7746 70 3.99999 55.2254 3.99999 37C3.99999 18.7746 18.7746 4 37 4C55.2254 4 70 18.7746 70 37ZM22.3333 25.3326C22.3333 24.1181 22.6684 22.9272 23.3017 21.891C25.2024 18.7807 29.2646 17.8002 32.3749 19.7009L52.491 31.9941C53.2851 32.4794 53.9524 33.1467 54.4377 33.9408C56.1273 36.7055 55.2557 40.3164 52.491 42.0059L32.3749 54.2991C31.3386 54.9323 30.1477 55.2674 28.9333 55.2674C25.2882 55.2674 22.3333 52.3125 22.3333 48.6674V25.3326ZM26 48.6674V25.3325C26 24.7928 26.1489 24.2635 26.4304 23.803C27.2751 22.4206 29.0806 21.9848 30.4629 22.8296L50.579 35.1228C50.8768 35.3047 51.127 35.555 51.309 35.8528C51.9426 36.8895 51.6158 38.2436 50.579 38.8772L30.4629 51.1704C30.0023 51.4518 29.4731 51.6007 28.9333 51.6007C27.3133 51.6007 26 50.2874 26 48.6674Z" fill="white"></path>
+                            </svg>
+                          </button>
+                      </div>
+                      <div class="absolute hidden lg:block bottom-0 left-0" style="margin-left: -160px;">
+                          <img class="block w-full" style="width: 320px;" src="cronos-assets/elements/square-group.svg" alt="">
+                      </div>
+                      <div class="mt-4 -mr-40 absolute hidden lg:block top-0 right-0" style="margin-right: -160px;">
+                          <img class="block w-full" style="width: 160px;" src="cronos-assets/elements/square-group-small.svg" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+                
+      <section class="py-20">
+          <div class="container mx-auto px-4">
+              
+              <div class="max-w-2xl mx-auto text-center mb-12">
+                  <div class="flex items-center justify-center mb-4">
+                      <a class="text-gray-400 text-xs font-bold" href="#">Home</a>
+                      <svg class="mx-2" width="4" height="8" viewbox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.12038 7.17461C-0.0593306 7.38428 -0.0350499 7.69993 0.174613 7.87964C0.384276 8.05935 0.699926 8.03507 0.879637 7.8254L3.87964 4.3254C4.04013 4.13816 4.04013 3.86186 3.87964 3.67461L0.879637 0.174613C0.699926 -0.0350495 0.384276 -0.0593303 0.174613 0.120381C-0.0350496 0.300092 -0.0593303 0.615742 0.120381 0.825405L2.84147 4.00001L0.12038 7.17461Z" fill="#A8A29E"></path>
+                      </svg>
+                      <a class="text-gray-400 text-xs font-bold" href="#">Formulaire</a>
+                      <svg class="mx-2" width="4" height="8" viewbox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.12038 7.17461C-0.0593306 7.38428 -0.0350499 7.69993 0.174613 7.87964C0.384276 8.05935 0.699926 8.03507 0.879637 7.8254L3.87964 4.3254C4.04013 4.13816 4.04013 3.86186 3.87964 3.67461L0.879637 0.174613C0.699926 -0.0350495 0.384276 -0.0593303 0.174613 0.120381C-0.0350496 0.300092 -0.0593303 0.615742 0.120381 0.825405L2.84147 4.00001L0.12038 7.17461Z" fill="#A8A29E"></path>
+                      </svg>
+                      <a class="text-gray-400 text-xs font-bold" href="#">Nom du. formulaire</a>
+                  </div>
+                  <h1 class="font-heading text-4xl font-bold mb-6">Lorem ipsum dolor sit amet consectutar domor</h1>
+                  <div class="flex items-center justify-center">
+                      <div class="mr-4">
+                          <img class="rounded-full w-16 h-16 object-cover" src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=547&amp;q=80" alt="">
+                      </div>
+                      <div class="text-left">
+                          <p class="text-gray-600 text-xl font-bold">Danny Bailey</p>
+                          <p class="text-gray-600 text-xl">Max Havelaar Team</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container mx-auto px-4">
+              <div class="max-w-2xl mx-auto">
+                  <p class="mb-6">These types of questions led me to miss numerous deadlines, and I wasted time and energy in back-and-forth communication. Sadly, this situation could have been avoided if the wireframes had provided enough detail.</p>
+                  <p class="mb-6">Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We are responsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative.</p>
+                  <p>These types of questions led me to miss numerous deadlines, and I wasted time and energy in back-and-forth communication. Sadly, this situation could have been avoided if the wireframes had provided enough detail.</p>
+              </div>
+          </div>
+      </section>
+                
+      <section class="py-20">  <div class="container mx-auto px-4 mb-32">    <div class="flex flex-wrap -m-4 pb-6">      <div class="w-full lg:w-1/3 p-4">        <div class="text-center">          <svg class="mx-auto mb-4" width="38" height="38" viewbox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">            <path d="M13 5L1 1V33L13 37M13 5L25 1M13 5V37M25 1L37 5V37L25 33M25 1V33M25 33L13 37" stroke="#006251" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>          </svg>          <p class="text-xl font-bold mb-2">Visit Us</p>          <p class="text-gray-600 mb-1">1686, Geraldine Lane</p>          <p class="text-gray-600">New York, NY 10013</p>        </div>      </div>      <div class="w-full lg:w-1/3 p-4">        <div class="text-center">          <svg class="mx-auto mb-4" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">            <path d="M7 11L21.1716 25.1716C22.7337 26.7337 25.2663 26.7337 26.8284 25.1716L41 11M8 38H40C41.1046 38 42 37.1046 42 36V12C42 10.8954 41.1046 10 40 10H8C6.89543 10 6 10.8954 6 12V36C6 37.1046 6.89543 38 8 38Z" stroke="#006251" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>          </svg>          <p class="text-xl font-bold mb-2">Send us message</p>          <p class="text-gray-600">hello@cronos.org.com</p>        </div>      </div>      <div class="w-full lg:w-1/3 p-4">        <div class="text-center">          <svg class="mx-auto mb-4" width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">            <path d="M41.9988 32.9533V38.3729C42.0073 40.4446 40.1445 42.1746 38.0528 41.9859C20.0001 42 6.00006 27.87 6.01419 9.93837C5.82581 7.85789 7.54721 6.00212 9.61628 6.00018H15.0466C15.925 5.99155 16.7766 6.302 17.4427 6.87368C19.3363 8.49899 20.5543 14.0155 20.0857 16.2086C19.7198 17.9207 17.9939 19.1186 16.8204 20.2897C19.3972 24.8124 23.1494 28.5571 27.681 31.1288C28.8544 29.9577 30.0547 28.2351 31.7702 27.87C33.971 27.4016 39.523 28.6213 41.1418 30.5281C41.7159 31.2042 42.0209 32.0674 41.9988 32.9533Z" stroke="#006251" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>          </svg>          <p class="text-xl font-bold mb-2">Call us</p>          <p class="text-gray-600">+7-843-672-431</p>        </div>      </div>    </div>  </div>  <div class="relative w-full bg-no-repeat bg-cover">    <img class="absolute top-0 right-0 h-96 w-full -mt-24 object-cover" src="images/brooke-cagle-8jp-6SjVibM-unsplash.jpg" alt="map">    <img class="absolute top-0 right-0 h-32 -mt-16" src="cronos-assets/elements/warning-light-small.svg" alt="">    <img class="absolute bottom-0 left-0 h-32 -mb-16" src="cronos-assets/elements/green-light-left.svg" alt="">  </div>  <div class="container mx-auto px-4 relative -mt-16">    <div class="max-w-2xl mx-auto">      <div class="bg-white shadow-md py-12 px-8 md:px-16">        <div class="flex justify-center mb-6">          <div class="bg-yellow-100 px-2 py-1 text-xs font-bold">Lorem ipsum</div>        </div>        <h1 class="font-heading text-center text-4xl lg:text-5xl max-w-md lg:max-w-xl mx-auto font-bold mb-12">Lorem ipsum dolor sit amet consectutar</h1>        <form action="">          <input class="px-6 py-3 w-full border border-gray-100 placeholder-gray-300 text-sm focus:ring focus:ring-gray-200 transition duration-200 outline-none mb-6" type="text" placeholder="Name">          <input class="px-6 py-3 w-full border border-gray-100 placeholder-gray-300 text-sm focus:ring focus:ring-gray-200 transition duration-200 outline-none mb-6" type="text" placeholder="Email address">          <textarea class="px-6 py-3 w-full border border-gray-100 placeholder-gray-300 text-sm focus:ring focus:ring-gray-200 transition duration-200 outline-none mb-6" rows="8" placeholder="Your message..."></textarea>          <button class="px-6 py-3 block text-center w-full bg-yellow-500 text-sm font-bold hover:bg-yellow-400 focus:ring focus:ring-yellow-200 transition duration-200" type="submit">Get Started</button>        </form>      </div>    </div>  </div></section>
+                
+      <section class="py-20">
+          <div class="container mx-auto px-4">
+              <div class="flex justify-center mb-6">
+                  <div class="bg-yellow-100 py-1 px-2 text-xs font-bold inline-block">New feature</div>
+              </div>
+              <h1 class="font-heading text-center text-4xl lg:text-5xl font-bold max-w-2xl lg:max-w-5xl mx-auto mb-4">Take quick action that increases your brand's regular profit.</h1>
+              <p class="text-gray-600 text-center max-w-xl mx-auto mb-6">If you have ever wondered how to develop your brand, this is the place for you. Take a big step forward in growing your business with this great tool.</p>
+              <div class="flex flex-wrap justify-center gap-4 mb-16">
+                  <a class="px-6 py-3 block text-center w-full sm:w-auto bg-green-500 text-white text-sm font-bold hover:bg-green-600 focus:ring focus:ring-green-300 transition duration-200" href="#">Activate your Demo</a>
+                  <a class="px-6 py-3 block text-center w-full sm:w-auto bg-orange-900 text-white text-sm font-bold hover:bg-orange-800 focus:ring focus:ring-orange-700 transition duration-200" href="#">Share with friends</a>
+              </div>
+              <div class="relative" style="height: 512px;">
+                  <img class="absolute hidden lg:block bottom-0 left-0 w-80 h-80 -ml-40" src="cronos-assets/elements/light-squares.svg" alt="">
+                  <img class="absolute hidden lg:block top-0 right-0 w-80 h-80 -mr-64" src="cronos-assets/elements/warning-group-square.svg" alt="">
+                  <img class="relative w-full object-cover h-full" src="https://images.unsplash.com/photo-1562071707-7249ab429b2a?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" alt="">
+              </div>
+          </div>
+      </section>
+                
+      <section class="py-20">
+          <div class="container mx-auto px-4">
+              <div class="flex justify-center mb-10">
+                  <a href="#" class="inline-block">
+                      <img src="cronos-assets/logos/cronos-logo.svg" alt="">
+                  </a>
+              </div>
+              <ul class="flex flex-wrap justify-center mb-10">
+                  <li class="mb-4 lg:mb-0 mr-6 md:mr-12"><a class="text-sm font-bold text-black" href="#">About</a></li>
+                  <li class="mb-4 lg:mb-0 mr-6 md:mr-12"><a class="text-sm font-bold text-black" href="#">Company</a></li>
+                  <li class="mb-4 lg:mb-0 mr-6 md:mr-12"><a class="text-sm font-bold text-black" href="#">Services</a></li>
+                  <li><a class="text-sm font-bold text-black" href="#">Testimonials</a></li>
+              </ul>
+              <ul class="flex items-center justify-center gap-8 mb-10">
+                  <li>
+                      <a class="inline-block" href="#">
+                          <img src="cronos-assets/logos/brands/facebook.svg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="inline-block" href="#">
+                          <img src="cronos-assets/logos/brands/twitter.svg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="inline-block" href="#">
+                          <img src="cronos-assets/logos/brands/Instagram.svg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="inline-block" href="#">
+                          <img src="cronos-assets/logos/brands/github.svg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="inline-block" href="#">
+                          <img src="cronos-assets/logos/brands/LinkedIn.svg" alt="">
+                      </a>
+                  </li>
+              </ul>
+              <p class="text-gray-500 text-center text-sm">All rights reserved © Cronos 2020</p>
+          </div>
+      </section>
+    </div>
+</body>
+</html>
+
