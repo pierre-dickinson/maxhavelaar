@@ -1,0 +1,8 @@
+/**
+* This is a valid CSS file.
+  **/
+    /* Masquer la checkbox Formulaire mobilisation 3 */
+        #mobilisation_hidden {
+            display: none;
+        }
+
